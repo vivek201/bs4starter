@@ -9,12 +9,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^4.0.0-alpha.6",
-    "font-awesome": "^4.7.0"
+    "bootstrap": "4.0.0",
+    "font-awesome": "4.7.0",
+    "isotope-layout": "3.0.6",
+    "slick-carousel": "1.8.1",
+    "zebra_accordion": "1.2.8"
   },
   "devDependencies": {
-    "browser-sync": "^2.23.6",
-    "gulp": "^3.9.1",
-    "gulp-sass": "^3.2.1"
+    "browser-sync": "2.23.6",
+    "gulp": "3.9.1",
+    "gulp-sass": "4.0.1"
   }
 }

@@ -15,9 +15,13 @@ gulp.task('js', function () {
     return gulp.src([
         'node_modules/bootstrap/dist/js/bootstrap.min.js',
         'node_modules/jquery/dist/jquery.min.js',
-        'node_modules/tether/dist/js/tether.min.js'])
-        .pipe(gulp.dest('src/js'))
-        .pipe(browserSync.stream());
+        'node_modules/tether/dist/js/tether.min.js',
+        'node_modules/slick-carousel/slick/slick.min.js',
+        'node_modules/zebra_accordion/dist/zebra_accordion.min.js',
+        'node_modules/isotope-layout/dist/isotope.pkgd.min.js'
+    ])
+    .pipe(gulp.dest('src/js'))
+    .pipe(browserSync.stream());
 });
 
 // Watch sass files & serve
@@ -41,4 +45,18 @@ gulp.task('fa', function () {
         .pipe(gulp.dest('src/css'));
 });
 
-gulp.task('default', ['js', 'serve', 'fa', 'fonts']);
+// Move slick css & zebre-accordion css to src/css folder
+gulp.task('slickcss', function () {
+    return gulp.src([
+        'node_modules/slick-carousel/slick/slick-theme.css',
+        'node_modules/slick-carousel/slick/slick.css',
+        'node_modules/slick-carousel/slick/ajax-loader.gif',
+        'node_modules/zebra_accordion/dist/zebra_accordion.min.css'
+    ]).pipe(gulp.dest('src/css'))
+        &&
+    gulp.src([
+        'node_modules/slick-carousel/slick/fonts/*',
+    ]).pipe(gulp.dest('src/css/fonts'));
+});
+
+gulp.task('default', ['js', 'serve', 'fa', 'slickcss', 'fonts']);
