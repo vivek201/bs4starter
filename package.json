@@ -12,6 +12,8 @@
     "bootstrap": "4.0.0",
     "font-awesome": "4.7.0",
     "isotope-layout": "3.0.6",
+    "jquery": "3.3.1",
+    "popper.js": "1.14.3",
     "slick-carousel": "1.8.1",
     "zebra_accordion": "1.2.8"
   },
