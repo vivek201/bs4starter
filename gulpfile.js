@@ -35,13 +35,18 @@ gulp.task('serve', ['sass'], function () {
 
 // Move fontAwesome fonts folder to src folder
 gulp.task('fonts', function () {
-    return gulp.src(['node_modules/font-awesome/fonts/*'])
-        .pipe(gulp.dest('src/fonts'));
+    return gulp.src(['node_modules/@fortawesome/fontawesome-free-webfonts/webfonts/*'])
+        .pipe(gulp.dest('src/webfonts'));
 });
 
 // Move fontAwesome css to src/css folder
 gulp.task('fa', function () {
-    return gulp.src(['node_modules/font-awesome/css/font-awesome.min.css'])
+    return gulp.src([
+        'node_modules/@fortawesome/fontawesome-free-webfonts/css/fontawesome.css',
+        'node_modules/@fortawesome/fontawesome-free-webfonts/css/fa-solid.css',
+        'node_modules/@fortawesome/fontawesome-free-webfonts/css/fa-regular.css',
+        'node_modules/@fortawesome/fontawesome-free-webfonts/css/fa-brands.css'
+    ])
         .pipe(gulp.dest('src/css'));
 });
 
