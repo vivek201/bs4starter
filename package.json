@@ -9,8 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@fortawesome/fontawesome-free-webfonts": "1.0.6",
-    "bootstrap": "4.1.0",
+    "@fortawesome/fontawesome-free-webfonts": "1.0.9",
+    "bootstrap": "4.1.1",
     "isotope-layout": "3.0.6",
     "jquery": "3.3.1",
     "popper.js": "1.14.3",
@@ -18,7 +18,7 @@
     "zebra_accordion": "1.2.8"
   },
   "devDependencies": {
-    "browser-sync": "2.23.6",
+    "browser-sync": "2.24.5",
     "gulp": "3.9.1",
     "gulp-sass": "4.0.1"
   }
